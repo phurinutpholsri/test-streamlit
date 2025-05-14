@@ -1,6 +1,10 @@
 import streamlit as st
 from openai import OpenAI
 
+
+main_page = st.Page("page_1.py", title="Assest Allocation", icon="🎈")
+page_2 = st.Page("page_2.py", title="Motor Insurance", icon="❄️")
+page_3 = st.Page("page_3.py", title="Credit Card", icon="🎉")
 # with st.sidebar:
 #     openai_api_key = st.text_input("Insert OpenAI key", key="chatbot_api_key", type="password")
 #     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
