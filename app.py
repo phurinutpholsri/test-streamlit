@@ -10,7 +10,7 @@ openai_api_key=st.secrets['OPENAI_API_KEY']
 st.title("💬 DoDo Chatbot")
 
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "ฉันคือโดโด้ มีอะไรอยากให้โดโด้ช่วยมั้ยครับ?"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
