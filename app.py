@@ -5,11 +5,19 @@ from openai import OpenAI
 main_page = st.Page("page_1.py", title="Assest Allocation", icon="🎈")
 page_2 = st.Page("page_2.py", title="Motor Insurance", icon="❄️")
 page_3 = st.Page("page_3.py", title="Credit Card", icon="🎉")
+
+# Set up navigation
+pg = st.navigation([main_page, page_2, page_3])
+
+# Run the selected page
+pg.run()
 # with st.sidebar:
 #     openai_api_key = st.text_input("Insert OpenAI key", key="chatbot_api_key", type="password")
 #     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
 #     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
 #     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+
+
 openai_api_key=st.secrets['OPENAI_API_KEY']
 st.title("💬 DoDo Chatbot")
 
