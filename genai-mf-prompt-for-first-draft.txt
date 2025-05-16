@@ -1,0 +1,373 @@
+ในฐานะที่เป็นผู้เชี่ยวชาญด้านการลงทุนด้าน Mutual fund หรือกองทุน ให้แก่ลูกค้ากลุ่ม wealth ของธนาคาร อยากให้คุณช่วยแนะนำ Portfolio ที่เหมาะสมแก่ลูกค้า โดยข้อมูลที่ให้ มีดังนี้
+
+****ข้อมูลโปรไฟล์ของลูกค้า A****
+
+| age | life_stage_by_age | gender_cd | has_married_flg | tmb_occupation_desc | occupation_bu | wlth_segmt | wealth_flg | have_touch_flg | have_pdh_flg | have_sa | have_all_free | have_no_fixed | have_me_save | have_me_move | have_sa_dream | have_sa_care | have_ca | have_td | have_mf | have_loan | have_hl | have_cyh | have_pl | have_cyb | have_hp | have_hp_new_car | have_hp_used_car | have_hp_cyc | have_credit_card | have_flash_card | have_reserve | have_ba | have_ba_life | have_ba_nonlife | have_ba_car | have_mf_experience | max_fundrisk_level | suit_score | have_structured_note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 62 | Young Wealth | M | 1 | พนักงานและลูกจ้างบริษัทห้างร้านกิจการอื่นๆ | Professional | PB | 1 | 1 | 1 | 7 | 2 | 1 | 0 | 0 | 0 | 1 | 1 | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 8 | 3 | 1 |
+
+ขออธิบายนิยามของบาง column ดังนี้ have_touch_flg = ผลิตภัณฑ์ mobile banking ของธนาคารชื่อ touch, pdh คือ Product holding หรือจำนวนผลิตภัณฑ์ของธนาคารที่ลูกค้ามี, sa = Saving account, all_free = บัญชีประเภทพื้นฐานที่สุดของธนาคาร, no_fixed = บัญชีดอกเบี้ยพิเศษ, have_me_save = บัญชีเก็บออมเงิน, ca = Current account, td = term deposit, ba = ประกันภัย, max fundrisk level = ระดับความเสี่ยงสูงสุดของกองทุน ที่ลูกค้าเคยลงทุน, suit_score = คะแนนที่สามารถรับความเสี่ยงได้ของกองทุน โดยมีคะแนนเต็มที่ 8 (เสี่ยงมาก), structured note = หุ้นกู้ที่มีอนุพันธ์แฝง ถ้าตัวเลขของข้อมูลคือ 0 เช่น have_ba = 0 หมายความว่า ลูกค้าไม่มีประกันภัย
+
+****ข้อมูล Trend ของ Average ของ Asset under management (AUM) ของลูกค้า A ในระยะเวลา 1 ปี****
+
+| as_of_date | avg_book_bal |
+| --- | --- |
+| 2024-04-29 17:00:00 | 96605537.14 |
+| 2024-05-30 17:00:00 | 108788043.27 |
+| 2024-06-29 17:00:00 | 110284117.77 |
+| 2024-07-30 17:00:00 | 120991966.19 |
+| 2024-08-30 17:00:00 | 122926560.56 |
+| 2024-09-29 17:00:00 | 140625476.66 |
+| 2024-10-30 17:00:00 | 110691219.87 |
+| 2024-11-29 17:00:00 | 109523466.72 |
+| 2024-12-30 17:00:00 | 93846460.32 |
+| 2025-01-30 17:00:00 | 93168211.72 |
+| 2025-02-27 17:00:00 | 121490961.56 |
+| 2025-03-30 17:00:00 | 95298873.86 |
+| 2025-04-29 17:00:00 | 93321652.29 |
+
+****ข้อมูล Asset Allocation ของลูกค้า A ในสินทรัพย์แต่ละชนิด****
+
+| asset_type_for_asset_allo | total_amount | percentage |
+| --- | --- | --- |
+| BOND | 0.0000 | 0.00 |
+| STRUCTURED NOTE | 15042251.0000 | 15.32 |
+| TD | 36000001.0000 | 36.67 |
+| NON-TD | 5752215.3054 | 5.86 |
+| Sub Debt TTB349A | 1000001.0000 | 1.02 |
+| EQUITY | 3695090.4091 | 3.76 |
+| TAX SAVING | 3606582.3113 | 3.67 |
+| TERM FUND | 12430262.0424 | 12.66 |
+| OTHER | 20659167.5233 | 21.04 |
+
+****Total AUM ของลูกค้า A****
+| sum_asset_allocation_amount |
+| --- |
+| 98185563.5915 |
+
+****Total idle cash หรือจำนวนเงินเย็นทั้งหมดของลูกค้า A ข้อมูลส่วนนี้สามารถใช้แนะนำให้ลูกค้าขนย้ายเงินเย็นหรือ Idle Cash ไปลงทุนในสินทรัพย์ที่น่าสนใจ****
+
+| sum(cold_cash_amount) |
+| --- |
+| 38658926.79 |
+
+****ประวัติ Realized Loss ทั้งหมดที่เกิดขึ้นบน Portfolio ของลูกค้า A ในรอบ 2 ปีที่ผ่านมา****
+
+| fund_code | accumulative_realized_loss_pct | gl_with_dividend | name_en | fund_type_1 | fund_risk_level | flg_tax_saving | grouped_fund_type |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ES-ASIA-A | -0.216612 | -1083062.840000 | Eastspring Asia Active Equity Fund (Accumulation Class) | FIF EQUITY | 6 | N | Other |
+| KGB1YP | 0.020440 | 204401.000000 | K Government Bond 1 Year P Fund | FIXED INCOME | 3 | N | Other |
+| ES-GSBOND-A | -0.106372 | -212745.420000 | EASTSPRING Global Smart Bond Fund (Accumulation) | FIF FIXED INCOME | 5 | N | Other |
+| ES-JB25LTFD | None | 113204.450000 | Eastspring JUMBO 25 Dividend LTF | LTF/SSF | 6 | Y | Tax Saving |
+| ES-GINCOME | -0.008504 | -30229.220000 | Eastspring Global Income Fund | FIF FIXED INCOME | 5 | N | Other |
+| ES-TM | 0.001477 | 62507.328399 | Eastspring Treasury Money Fund | FIXED INCOME | 1 | N | Other |
+| PRINCIPAL iPROP-D | None | 9067.180000 | Principal Property Income Fund (ClassD) | FIF EQUITY | 8 | N | Equity |
+| KFSMART-A | 0.001869 | 9347.900000 | Krungsri Smart Fixed Income Fund-A | FIXED INCOME | 4 | N | Other |
+| VALUE-D LTF | None | 3706.380000 | Value Plus - Dividend Long Term Equity Fund | LTF | 6 | Y | Tax Saving |
+
+****Unrealized Loss ทั้งหมดที่เกิดขึ้นบน Portfolio ของลูกค้า A****
+
+| fund_Code | fund_type_1 | fund_risk_level | flg_tax_saving | grouped_fund_type | gl | unrlz_loss_pct | matuarity_date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| PRINCIPAL iPROP-D | FIF EQUITY | 8 | N | Equity | -341553.682878 | -0.341553 | None |
+| UHCRMF | RMF | 7 | Y | Tax Saving | 2483.326298 | 0.009934 | None |
+| VALUE-D LTF | LTF | 6 | Y | Tax Saving | -40315.285029 | -0.403143 | None |
+| ES-JB25LTFD | LTF/SSF | 6 | Y | Tax Saving | -631352.281854 | -0.236461 | None |
+| ES-EAE | FIF EQUITY | 6 | N | Equity | -1963358.907985 | -0.392672 | None |
+| ES-TM | FIXED INCOME | 1 | N | Other | 739.958291 | 0.004601 | None |
+| ES-GOVCP6M35 | FIXED INCOME | 3 | N | Other | 37731.000000 | 0.005390 | None |
+| ES-GOVCP1Y8 | FIXED INCOME | 3 | N | Term Fund | 195753.142400 | 0.016000 | 2025-09-17 17:00:00 |
+| ES-BRMF | RMF | 4 | Y | Tax Saving | 50806.842268 | 0.056757 | None |
+| ES-LINK2Y4MA | OTHERS | 5 | N | Other | -36924.077716 | -0.012308 | None |
+| KTSS | FIXED INCOME | 1 | N | Other | 4542.489953 | 0.000899 | None |
+| ES-MF | FIXED INCOME | 1 | N | Other | 50.352320 | 0.049352 | None |
+| K-SF-A | FIXED INCOME | 4 | N | Other | 39629.400419 | 0.007767 | None |
+
+****ข้อมูลของกองทุนประเภท Thai ESG ซึ่งเป็นกองทุนตัวใหม่ ได้รับการ launched ในปี 2568 กองทุน Thai ESG เป็นกองทุนรวมที่มีนโยบายลงทุนในสินทรัพย์ในประเทศไทยทั้งภาครัฐและเอกชน เช่น ตราสารหนี้, ตราสารทุน เป็นต้น โดยคำนึงถึงหลัก ESG (Environment, Social และ Governance) ซึ่งเป็นทางเลือกหนึ่งของผู้ที่ต้องการลงทุนระยะยาวในกิจการที่เน้นความยั่งยืน
+นอกจากนั้น ยังได้รับสิทธิลดหย่อนภาษีแบบจัดเต็ม เพราะสามารถลงทุนได้สูงสุด 30% ของเงินได้พึงประเมิน ไม่เกิน 300,000 บาท โดยไม่นับรวมวงเงินกับกองทุนการออมเพื่อเกษียณ เช่น กองทุน SSF, กองทุน RMF, เบี้ยประกันชีวิตแบบบำนาญ, กองทุนสำรองเลี้ยงชีพ, กองทุนบำเหน็จบำนาญข้าราชการ (กบข.), กองทุนสงเคราะห์โรงเรียนเอกชน, กองทุนการออมแห่งชาติ (กอช.)
+ผลประกอบการสามารถยึดตาม return_since_inception ได้เลย****
+
+| fund_code | name_en | name_th | fund_risk_level | return_1_yr | return_since_inception | grouped_fund_type | fund_type_for_trigger |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ES-DIV70THAIESGX-68A | Eastspring Dividend Stock 70 Thailand ESG Extra Fund (2025 New investment - Accumulation Class) | กองทุนเปิดอีสท์สปริง หุ้นปันผล 70 ไทยเพื่อความยั่งยืนแบบพิเศษ (ชนิดเงินลงทุนใหม่ปี 2568 แบบสะสมมูลค่า) | 5 | None | -0.00068 | Other | Balanced Fund |
+| ES-DIVTHAIESGX-68D | Eastspring Dividend Stock Thailand ESG Extra Fund (2025 New investment - Dividend Class) | กองทุนเปิดอีสท์สปริง หุ้นปันผล ไทยเพื่อความยั่งยืนแบบพิเศษ (ชนิดเงินลงทุนใหม่ปี 2568 แบบจ่ายเงินปันผล) | 6 | None | 0.00054 | Other | Thai Equity |
+| UTSEQ-THAIESG | United Thai Sustainable Equity Fund - THAIESG | กองทุนเปิด ยูไนเต็ด หุ้นไทย ซัสเทนเนเบิล - ชนิดหน่วยลงทุนไทยเพื่อความยั่งยืนและไม่จ่ายเงินปันผล | 6 | -0.09443 | -0.06726 | Tax Saving | Thai Equity |
+| ES-DIV70THAIESGX-68D | Eastspring Dividend Stock 70 Thailand ESG Extra Fund (2025 New investment - Dividend Class) | กองทุนเปิดอีสท์สปริง หุ้นปันผล 70 ไทยเพื่อความยั่งยืนแบบพิเศษ (ชนิดเงินลงทุนใหม่ปี 2568 แบบจ่ายเงินปันผล) | 5 | None | -0.00068 | Other | Balanced Fund |
+| ES-DIVTHAIESGX-68A | Eastspring Dividend Stock Thailand ESG Extra Fund (2025 New investment - Accumulation Class) | กองทุนเปิดอีสท์สปริง หุ้นปันผล ไทยเพื่อความยั่งยืนแบบพิเศษ (ชนิดเงินลงทุนใหม่ปี 2568 แบบสะสมมูลค่า) | 6 | None | 0.00054 | Other | Thai Equity |
+| UTSB-THAIESG | United Thai Sustainable Bond Fund - THAIESG | กองทุนเปิด ยูไนเต็ด ตราสารหนี้ไทย ซัสเทนเนเบิล-ชนิดหน่วยลงทุนไทยเพื่อความยั่งยืนและไม่จ่ายเงินปันผล | 3 | None | 0.03162 | Tax Saving | Long Term Thai Fixed Income |
+
+****ข้อมูล Country Exposure หรือข้อมูลประกอบว่ากองทุนแต่ละกองทุนที่ลูกค้าถือ มีสัดส่วนในการลงทุนที่ประเทศใดบ้าง ข้อมูลนี้ใช้ช่วยบ่งชี้ว่าลูกค้าสนใจกองทุนที่ลงทุนในประเทศใด****
+
+| fund_code | CountryExposure | country_exposure_value_weight |
+| --- | --- | --- |
+| ES-ASIA-A | Thailand | 0.014054800 |
+| ES-ASIA-A | United States | 0.016098700 |
+| ES-ASIA-A | China | 0.317864900 |
+| ES-ASIA-A | Hong Kong | 0.065727400 |
+| ES-ASIA-A | India | 0.228816600 |
+| ES-ASIA-A | OTHER | 0.010200600 |
+| ES-ASIA-A | South Korea | 0.075720800 |
+| ES-ASIA-A | Sri Lanka | 0.006416900 |
+| ES-ASIA-A | Singapore | 0.057651100 |
+| ES-ASIA-A | Taiwan | 0.192082400 |
+| ES-ASIA-A | Indonesia | 0.015365800 |
+| PRINCIPAL iPROP-D | Hong Kong | 0.001587800 |
+| PRINCIPAL iPROP-D | Thailand | 0.372834000 |
+| PRINCIPAL iPROP-D | Singapore | 0.625578200 |
+| UHCRMF | Canada | 0.002400000 |
+| UHCRMF | OTHER | 0.000082400 |
+| UHCRMF | United Kingdom | 0.079755000 |
+| UHCRMF | Switzerland | 0.042920800 |
+| UHCRMF | Belgium | 0.021314900 |
+| UHCRMF | Netherlands | 0.002399700 |
+| UHCRMF | Ireland | 0.001388900 |
+| UHCRMF | China | 0.005311700 |
+| UHCRMF | Japan | 0.067184000 |
+| UHCRMF | Denmark | 0.054648400 |
+| UHCRMF | United States | 0.722594200 |
+| VALUE-D LTF | Thailand | 1.000000000 |
+| KFSMART-A | Thailand | 0.981559700 |
+| KFSMART-A | Cambodia | 0.018440300 |
+| ES-JB25LTFD | Thailand | 1.000000000 |
+| ES-EAE | Mexico | 0.045002700 |
+| ES-EAE | China | 0.239614900 |
+| ES-EAE | Singapore | 0.026307800 |
+| ES-EAE | Brazil | 0.128178900 |
+| ES-EAE | India | 0.166500800 |
+| ES-EAE | South Korea | 0.107959800 |
+| ES-EAE | Canada | 0.026329200 |
+| ES-EAE | OTHER | 0.075264800 |
+| ES-EAE | Poland | 0.031200500 |
+| ES-EAE | United States | 0.025360800 |
+| ES-EAE | Taiwan | 0.128279800 |
+| ES-GSBOND-A | Canada | 0.011815900 |
+| ES-GSBOND-A | Spain | 0.003826900 |
+| ES-GSBOND-A | United Kingdom | 0.007276200 |
+| ES-GSBOND-A | United States | 0.896145200 |
+| ES-GSBOND-A | Mexico | 0.006729500 |
+| ES-GSBOND-A | Nigeria | 0.003058400 |
+| ES-GSBOND-A | OTHER | 0.048192400 |
+| ES-GSBOND-A | Cayman Islands | 0.011732700 |
+| ES-GSBOND-A | France | 0.004083400 |
+| ES-GSBOND-A | Ireland | 0.004081500 |
+| ES-GSBOND-A | Dominican Republic | 0.003057900 |
+| UTSB-THAIESG | Thailand | 1.000000000 |
+| ES-GINCOME | United States | 0.810554700 |
+| ES-GINCOME | Germany | 0.006795900 |
+| ES-GINCOME | Netherlands | 0.008080000 |
+| ES-GINCOME | France | 0.007233400 |
+| ES-GINCOME | Ireland | 0.013251300 |
+| ES-GINCOME | Australia | 0.016232200 |
+| ES-GINCOME | Canada | 0.007967100 |
+| ES-GINCOME | Mexico | 0.014547200 |
+| ES-GINCOME | United Kingdom | 0.041435800 |
+| ES-GINCOME | OTHER | 0.060647700 |
+| ES-GINCOME | Belize | 0.013254700 |
+| ES-TM | Thailand | 1.000000000 |
+| ES-GOVCP1Y8 | Thailand | 1.000000000 |
+| ES-BRMF | South Korea | 0.037800600 |
+| ES-BRMF | China | 0.007895800 |
+| ES-BRMF | Thailand | 0.774134200 |
+| ES-BRMF | United Kingdom | 0.018182200 |
+| ES-BRMF | Hong Kong | 0.009475700 |
+| ES-BRMF | United States | 0.044759600 |
+| ES-BRMF | Singapore | 0.027002800 |
+| ES-BRMF | Japan | 0.080749100 |
+| ES-LINK2Y4MA | Thailand | 1.000000000 |
+| KTSS | Thailand | 1.000000000 |
+| ES-MF | Thailand | 1.000000000 |
+| K-SF-A | Singapore | 0.021330400 |
+| K-SF-A | Thailand | 0.978669600 |
+
+****ข้อมูล Industry Exposure หรือข้อมูลประกอบว่ากองทุนแต่ละกองทุนที่ลูกค้าถือ มีสัดส่วนในการลงทุนในอัตสาหกรรมใดบ้าง ข้อมูลนี้ใช้ช่วยบ่งชี้ว่าลูกค้าสนใจกองทุนที่ลงทุนใน Industry ใด****
+
+| fund_code | equity_sector | equity_sector_value |
+| --- | --- | --- |
+| ES-ASIA-A | Consumer Cyclical | 0.152936700 |
+| ES-ASIA-A | Communication services | 0.121275100 |
+| ES-ASIA-A | Real Estate | 0.030085500 |
+| ES-ASIA-A | Utilities | 0.010074600 |
+| ES-ASIA-A | Industrials | 0.077128200 |
+| ES-ASIA-A | Energy | 0.027869400 |
+| ES-ASIA-A | Financial Services | 0.184423200 |
+| ES-ASIA-A | Healthcare | 0.041387100 |
+| ES-ASIA-A | Technology | 0.281300900 |
+| ES-ASIA-A | Basic materials | 0.050894300 |
+| ES-ASIA-A | Consumer Defensive | 0.022625000 |
+| ES-DIV70THAIESGX-68D | No Sector | 1.000000000 |
+| PRINCIPAL iPROP-D | Real Estate | 1.000000000 |
+| UHCRMF | Healthcare | 0.999917600 |
+| UHCRMF | Financial Services | 0.000082400 |
+| VALUE-D LTF | Technology | 0.019133200 |
+| VALUE-D LTF | No Sector | 1.00E-7 |
+| VALUE-D LTF | Utilities | 0.088243900 |
+| VALUE-D LTF | Real Estate | 0.094371000 |
+| VALUE-D LTF | Communication services | 0.131489800 |
+| VALUE-D LTF | Healthcare | 0.076991000 |
+| VALUE-D LTF | Industrials | 0.179843800 |
+| VALUE-D LTF | Consumer Cyclical | 0.065454700 |
+| VALUE-D LTF | Basic materials | 0.014550600 |
+| VALUE-D LTF | Consumer Defensive | 0.073510100 |
+| VALUE-D LTF | Energy | 0.087084900 |
+| VALUE-D LTF | Financial Services | 0.169326900 |
+| KFSMART-A | No Sector | 1.000000000 |
+| ES-JB25LTFD | Industrials | 0.309177400 |
+| ES-JB25LTFD | Consumer Defensive | 0.069931100 |
+| ES-JB25LTFD | Healthcare | 0.055323300 |
+| ES-JB25LTFD | Consumer Cyclical | 0.067935100 |
+| ES-JB25LTFD | Financial Services | 0.119254400 |
+| ES-JB25LTFD | Energy | 0.139259100 |
+| ES-JB25LTFD | Communication services | 0.117586700 |
+| ES-JB25LTFD | Utilities | 0.070483300 |
+| ES-JB25LTFD | Real Estate | 0.025826900 |
+| ES-JB25LTFD | Basic materials | 0.025222700 |
+| ES-EAE | Energy | 0.087591200 |
+| ES-EAE | No Sector | 2.00E-7 |
+| ES-EAE | Industrials | 0.037019200 |
+| ES-EAE | Technology | 0.259953400 |
+| ES-EAE | Consumer Defensive | 0.029546600 |
+| ES-EAE | Basic materials | 0.053653300 |
+| ES-EAE | Financial Services | 0.221329300 |
+| ES-EAE | Consumer Cyclical | 0.223279600 |
+| ES-EAE | Communication services | 0.087627200 |
+| ES-GSBOND-A | Healthcare | 0.517814900 |
+| ES-GSBOND-A | Basic materials | 0.023794700 |
+| ES-GSBOND-A | Energy | 0.451040200 |
+| ES-GSBOND-A | Communication services | 0.007350200 |
+| UTSB-THAIESG | No Sector | 1.000000000 |
+| ES-GINCOME | Real Estate | 0.443350600 |
+| ES-GINCOME | Communication services | 0.130884200 |
+| ES-GINCOME | Financial Services | 0.425765200 |
+| ES-TM | No Sector | 1.000000000 |
+| ES-GOVCP6M35 | No Sector | 1.000000000 |
+| ES-GOVCP1Y8 | No Sector | 1.000000000 |
+| ES-BRMF | No Sector | 1.000000000 |
+| ES-LINK2Y4MA | No Sector | 1.000000000 |
+| KTSS | No Sector | 1.000000000 |
+| ES-MF | No Sector | 1.000000000 |
+| K-SF-A | No Sector | 1.000000000 |
+
+****ข้อมูล Portfolio ที่ทางทีมการลงทุนแนะนำ โดยจะแต่ละ portfolio_solution จะมี objectives และข้อมูลอื่นๆ เช่น ผลประกอบการ, maximum drawdown หรือจำนวนขาดทุนสูงสุดในหน่วยของ percent, ประเทศที่กองทุนนี้เน้นลงทุน, อุตสาหกรรมที่กองทุนนี้เน้นลงทุน คุณสามารถใช้ข้อมูลนี้ดูประกอบกับข้อมูล Realized loss และ Unrealized Loss รวมถึงข้อมูลของประเทศและอุตสาหกรรมที่ลูกค้าชอบลงทุน เพื่อใช้ประกอบการตัดสินใจในการนำเสนอ portfolio_solution****
+
+| portfolio_solution | objectives | target_return | historical_volatility | actual_max_drawdown | investment_horizon | description | min_suit_score | equity_sector_concentrate | country_exposure_concentrate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Partial Liquidity & Enhance Return 2 | Wellness Solution
+(เน้นการมุ่งรักษาเงินต้น มีโอกาสขาดทุนได้น้อย) | 0.84%-2.64% | 0.0023 | -0.0004 | 3) > 3 Year | Partial Liquidity & Enhance Return 2 : มีโอกาสได้ผลตอบแทนสูงกว่าเงินฝาก และสูงกว่าพอร์ต Partial Liquidity & Enhance Return 1 แต่ต้องมีการลงทุนบางส่วนที่ใช้ระยะเวลาลงทุนนานกว่า 3 ปี และบางสินทรัพย์ที่ลงทุนอาจมีความผันผวนด้านราคาพอประมาณ เหมาะสำหรับ
+i. ผู้ลงทุนระดับความเสี่ยง 2 ขึ้นไป
+ii. ลูกค้าที่ต้องการเตรียมเงินก้อนไว้ใช้ในระยะ 3-5 ปีข้างหน้า
+iii. ลูกค้าต้องการสภาพคล่องไว้บางส่วน เพื่อใช้สำหรับเงินหมุนเวียน หรือรอโอกาสการลงทุน เช่นการซื้ออสังหาริมทรัพย์ หรือ ซื้อที่ดิน
+iv. เผื่อสภาพคล่องไว้รอลงทุน | 2 | No Sector | Thailand |
+| UL_Moderate Risk | Unit-Linked | 5% | 0.0422 | -0.0364 | 3) > 3 Year | สำหรับผู้ที่รับความเสี่ยงจากการลงทุนได้ และมีต้นทุนค่าประกันชีวิต (Cost Of Insurance : COI) ประมาณ 4% | 4 | No Sector | United States |
+| Advanced Asset Allocation 4 | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 7.5% | 0.1202 | -0.2087 | 3) > 3 Year | Advanced Asset Allocation 4 (AAA4): (FI:EQ Model Weight 25%:75%) เน้นการลงทุนในกองทุนตราสารทุนทั้งในและต่างประเทศ เพื่อเพิ่มโอกาสในการได้รับผลตอบแทนระดับสูง พร้อมกับความเสี่ยงจากการลงทุนที่สูงขึ้นเช่นกัน รวมทั้งพอร์ตไม่มีการลงทุนในกองทุนที่มีกำหนดระยะเวลาอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ค่อนข้างสูง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการได้ผลตอบแทนในระดับสูง แต่การกระจายการลงทุนไป Asset Class อื่นอย่างตราสารหนี้บ้างเพื่อลดความผันผวนของผลตอแทนตอบแทน
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ที่สูงกว่าปกติ เช่น เพื่อการไปท่องเที่ยวต่างประเทศ รวมทั้งเพื่อสร้างความมั่งคั่งให้เพียงพอต่อการแต่งงาน การให้การศึกษาบุตรในระดับสูง การให้มรดก ซื้ออสังหาริมทรัพย์ เป็นต้น | 4 | Financial Services | United States |
+| Wealth Accumulation (Moderate) | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 5.5% | 0.0726 | -0.0482 | 3) > 3 Year | Wealth Accumulation (Moderate): (EQ Model Weight 50%) มีการกระจายการลงทุนไปยังสินทรัพย์เสี่ยงอย่างกองทุนตราสารทุน รวมทั้งสินทรัพย์ที่มีความเสี่ยงต่ำ และ/หรือ สินทรัพย์ที่ให้ผลตอบแทนที่แน่นอนอย่าง Term Fund ในสัดส่วนที่ใกล้เคียงกัน เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ปานกลาง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. เก็บเงินสำหรับการเกษียณ ที่ต้องการผลตอบแทนพอประมาณ เช่น พนักงานวัยกลางคน ช่วงอายุ 35 – 45 ปี
+iv. เก็บเงินเพื่อการศึกษาบุตรในระดับปริญญาตรี-โท | 4 | No Sector | United States |
+| Liquidity Need | Wellness Solution
+(เน้นการมุ่งรักษาเงินต้น มีโอกาสขาดทุนได้น้อย) | 1.82%-2.29% | 0.0002 | 0.0 | 1) 6-12 Month | Liquidity Need: เน้นสภาพคล่องเป็นหลัก แต่มีโอกาสได้ผลตอบแทนสูงกว่าเงินฝาก เหมาะสำหรับ
+i. ผู้ลงทุนทุกระดับความเสี่ยง
+ii. อยากเตรียมเงินส่งลูกเรียนเมืองนอกในระยะ 6-12 เดือน
+iii. เผื่อสภาพคล่องไว้ต่อยอดทางธุรกิจ เช่น Renovate โรงแรม
+iv. เผื่อสภาพคล่องไว้รอลงทุน | 1 | No Sector | Thailand |
+| Advanced Asset Allocation 2 | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 4% | 0.0522 | -0.1295 | 3) > 3 Year | Advanced Asset Allocation 2 (AAA2): (FI:EQ Model Weight 75%:25%) เน้นการลงทุนในกองทุนตราสารหนี้ทั้งในและต่างประเทศซึ่งมีผลขาดทุนได้ และมีการจัดสรรเงินบางส่วนลงทุนในกองทุนตราสารทุนเพื่อเพิ่มผลตอบแทน รวมทั้งไม่มีการลงทุนในกองทุนที่มีกำหนดระยะเวลาอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ค่อนข้างสูง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการได้ผลตอบแทนที่สูงกว่าการลงทุนในกองทุนตราสารหนี้ทั่วไป
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ปกติ | 4 | Financial Services | United States |
+| Thematic Portfolio | Aspiration Goal
+(เน้นการเติบโตของเงินลงทุนในระดับสูง พร้อมกับความเสี่ยงที่สูง | 12.00% - 13.00% | 0.211 | -0.1705 | 3) > 3 Year | Thematic Portfolio: เน้นจัดพอร์ตการลงทุนในตราสารทุน (Equity Allocation) ระดับ Country หรือ Sector และ/หรือ อาจมีการกระจายการลงทุนในสินทรัพย์ทางเลือกในบางส่วน รวมทั้งมีการลงทุนในลักษณะ Concentrated Position เพื่อสร้างผลตอบแทนในระดับสูงมาก เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้สูง (Suit Score 5)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการผลตอบแทนจากการลงทุนสูงมาก และรับผลขาดทุนที่มากกว่า 20% ได้
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ระดับสูงมาก เช่น เพื่อการไปท่องเที่ยวต่างประเทศเป็นประจำ หรือ เพื่อการเกษียณที่เร็วขึ้น รวมทั้งเพื่อสร้างความมั่งเพียงพอต่อการแต่งงานหรูหรา การให้การศึกษาบุตรระดับสูง เช่น ปริญญาเอก การให้มรดก ซื้ออสังหาริมทรัพย์ที่มีราคาแพง เป็นต้น | 5 | Technology | United States |
+| Passive Asset Allocation | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | Thai Annual CPI+3% | 0.0702 | -0.0513 | 3) > 3 Year | Passive Asset Allocation (PAA): (FI:EQ Model Weight 40%:60%) กระจายการลงทุนในตราสารทุนและตราสารหนี้ด้วยสัดส่วนการลงทุนแบบ Traditional Asset Allocation และเน้นการลงทุนในกองทุน Passive Fund ที่ผลตอบแทนเคลื่อนไหวไปตาม Index รวมทั้งพอร์ตไม่มีการลงทุนในกองทุนที่มีกำหนดระยะเวลาอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ค่อนข้างสูง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการผลตอบแทนจากการลงทุนในดัชนีของสินทรัย์ต่างๆ เช่น S&P 500 เป็นต้น
+v. ต้องการรักษา purchasing power ในระยะยาว (ได้ผลตอบสูงกว่าเงินฝาก)
+vi. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ที่ค่อนข้างสูงกว่าปกติ เช่น เพื่อการไปท่องเที่ยวต่างประเทศ รวมทั้งเพื่อสร้างความมั่งคั่งให้เพียงพอต่อการแต่งงาน การให้การศึกษาบุตร การให้มรดก ซื้ออสังหาริมทรัพย์ เป็นต้น | 4 | No Sector | Thailand |
+| Wealth Accumulation (Aggressive) | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 7.5% | 0.1051 | -0.0708 | 3) > 3 Year | Wealth Accumulation (Aggressive): (EQ Model Weight 75%) มีการกระจายการลงทุนไปยังสินทรัพย์เสี่ยงอย่างกองทุนตราสารทุนในระดับสูง พร้อมกับความเสี่ยงที่สูงขึ้น มีโอกาสขาดทุนมากขึ้น เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ปานกลางถึงสูง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. เก็บเงินสำหรับการเกษียณ ที่ต้องการผลตอบแทนlสูงกว่า Moderate Model เช่น พนักงานวัยเริ่มต้นทำงาน ช่วงอายุ 22 – 35 ปี
+iv. เก็บเงินเพื่อการท่องเที่ยว | 4 | Diversified Sector | United States |
+| Advanced Asset Allocation 5 | Aspiration Goal
+(เน้นการเติบโตของเงินลงทุนในระดับสูง พร้อมกับความเสี่ยงที่สูง | 9.50% - 10.00% | 0.1508 | -0.1911 | 3) > 3 Year | Advanced Asset Allocation 5 (AAA5): (EQ Model Weight 90% - 100%) เน้นจัดพอร์ตการลงทุนในตราสารทุน (Equity Allocation) เป็นหลัก และ/หรือ อาจมีการกระจายการลงทุนในสินทรัพย์ทางเลือกในบางส่วนเพื่อสร้างผลตอบแทนในระดับสูง เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้สูง (Suit Score 5)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการผลตอบแทนจากการลงทุนสูง และรับผลขาดทุนในระหว่างทางที่มากกว่า 15% ได้
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ระดับสูงกว่าปกติ เช่น เพื่อการไปท่องเที่ยวต่างประเทศเป็นประจำ หรือ เพื่อการเกษียณที่เร็วขึ้น รวมทั้งเพื่อสร้างความมั่งคั่งให้เพียงพอต่อการแต่งงานหรูหรา การให้การศึกษาบุตรระดับสูง เช่น ปริญญาเอก การให้มรดก ซื้ออสังหาริมทรัพย์ เช่น บ้านหลังที่สอง เป็นต้น
+| 5 | Technology | United States |
+| UL_Low Risk | Unit-Linked | 3% | 0.0224 | -0.0154 | 3) > 3 Year | สำหรับผู้ที่รับความเสี่ยงจากการลงทุนได้ และมีต้นทุนค่าประกันชีวิต (Cost Of Insurance : COI) ประมาณ 2% | 3 | No Sector | Thailand |
+| UL_High Risk | Unit-Linked | 7.5% | 0.0688 | -0.0611 | 3) > 3 Year | สำหรับผู้ที่รับความเสี่ยงจากการลงทุนได้ และมีต้นทุนค่าประกันชีวิต (Cost Of Insurance : COI) ประมาณ 6% | 4 | Technology | United States |
+| Advanced Asset Allocation 1 | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 2.5% | 0.0242 | -0.0751 | 3) > 3 Year | Advanced Asset Allocation 1 (AAA1): (FI Model Weight 100%) ลงทุนในกองทุนตราสารหนี้ทั้งในและต่างประเทศซึ่งมีผลขาดทุนได้ แต่เน้นไม่ให้กองทุนมีความผันผวนมากนัก และไม่มีการลงทุนในกองทุนที่มีกำหนดระยะเวลาอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ปานกลาง (Suit Score 3)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการได้ผลตอบแทนที่สูงกว่าเงินฝากและการลงทุนในกองทุนตราสารหนี้ระยะสั้นทั่วไป
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ปกติ | 3 | No Sector | Thailand |
+| Partial Liquidity & Enhance Return 1 | Wellness Solution
+(เน้นการมุ่งรักษาเงินต้น มีโอกาสขาดทุนได้น้อย) | 1.21%-2.52% | 0.0009 | -0.0002 | 2) 1-3 Year | Partial Liquidity & Enhance Return 1: มีโอกาสได้ผลตอบแทนสูงกว่าเงินฝาก และสูงกว่าพอร์ต Liquidity แต่ต้องมีการลงทุนบางส่วนที่ใช้ระยะเวลาลงทุนนานกว่า 1 ปี และบางสินทรัพย์ที่ลงทุนอาจมีความผันผวนด้านราคาเล็กน้อย เหมาะสำหรับ
+i. ผู้ลงทุนทุกระดับความเสี่ยง
+ii. ลูกค้าที่เตรียมเงินไว้ใช้ในระยะ 1-3 ปีข้างหน้า เช่น ส่งลูกเรียน เปิดกิจการ
+iii. ต้องการคงสภาพคล่องไว้บางส่วน เพื่อใช้สำหรับเงินหมุนเวียนในกิจการ หรือ ใช้จ่ายส่วนตัว
+iv. เผื่อสภาพคล่องไว้รอลงทุน | 1 | No Sector | Thailand |
+| Income Generation | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 3.5% | 0.0359 | -0.0164 | 3) > 3 Year | Income Generation: (EQ Model Weight 25%) เน้นลงทุนในสินทรัพย์ที่มีโอกาสจ่ายกระแสเงินสดสม่ำเสมอ เช่น กองทุนที่มีนโยบายจ่ายปันผล และ/หรือ สินทรัพย์ที่ให้ผลตอบแทนที่แน่นอนอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ปานกลางค่อนข้างต่ำ (Suit Score 3)
+ii. ต้องการเงินเก็บสำหรับการเกษียณ และต้องการกระแสเงินสดมาไว้สำหรับการใช้จ่ายบ้าง
+iii. ต้องการเงินหมุนเวียนสำหรับการใช้จ่ายในครอบครัว | 3 | No Sector | Thailand |
+| Wealth Accumulation (Conservative) | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 3.5% | 0.0413 | -0.025 | 3) > 3 Year | Wealth Accumulation (Conservative): (EQ Model Weight 25%) เน้นลงทุนในสินทรัพย์ที่มีความเสี่ยงต่ำ และ/หรือ สินทรัพย์ที่ให้ผลตอบแทนที่แน่นอนอย่าง Term Fund ขณะที่มีการลงทุนบางส่วนในสินทรัพย์เสี่ยงอย่างกองทุนตราสารทุนเพื่อเพิ่มผลตอบแทน เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ปานกลางค่อนข้างต่ำ (Suit Score 3 หรือ 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. เก็บเงินสำหรับการเกษียณ เช่น พนักงานวัยใกล้เกษียณ อายุ 45 ปี ขึ้นไป
+iv. เก็บเงินดาวน์ บ้าน/รถ ในอีก 3 ปีข้างหน้า | 3 | No Sector | Thailand |
+| Advanced Asset Allocation 3 | Wealth Accumulation
+(เน้นการเติบโตของเงินลงทุน และอาจมีกระแสเงินสดระหว่างทาง) | 5.5% | 0.0849 | -0.1777 | 3) > 3 Year | Advanced Asset Allocation 3 (AAA3): (FI:EQ Model Weight 50%:50%) กระจายการลงทุนในกองทุนตราสารหนี้ และกองทุนตราสารทุนในสัดส่วนที่ใกล้เคียงกันเพื่อเพิ่มโอกาสในการได้รับผลตอบแทนที่สูงขึ้น รวมทั้งไม่มีการลงทุนในกองทุนที่มีกำหนดระยะเวลาอย่าง Term Fund เหมาะสำหรับ
+i. ผู้ที่รับความเสี่ยงได้ค่อนข้างสูง (Suit Score 4)
+ii. ไม่เน้นกระแสเงินสดระหว่างทาง
+iii. ไม่จำเป็นที่จะต้องมีส่วนนึงในพอร์ตการลงทุนที่ได้ผลตอบแทนแน่นอน
+iv. ต้องการได้ผลตอบแทนที่สูงกว่าการลงทุนในกองทุนตราสารหนี้ทั่วไปและกองทุนตราสารทุนบางประเทศ
+v. เก็บเงินไว้ใช้จ่ายยามเกษียณ ด้วย Living Standard ที่ค่อนข้างสูงกว่าปกติ เช่น เพื่อการไปท่องเที่ยว รวมทั้งเพื่อสร้างความมั่งคั่งให้เพียงพอต่อการแต่งงาน การให้การศึกษาบุตร ซื้ออสังหาริมทรัพย์ เป็นต้น | 4 | Financial Services | United States |
+
+ข้างบนคือข้อมูลทั้งหมดเพื่อใช้ในการแนะนำ Portfolio solution หรือ Structure Note สำหรับลุกค้านาย A โดยเราขอให้คุณตอบในโครงสร้างดังนี้
+1. Customer Understanding
+1.1 ลูกค้าอายุเท่าไหร่ และมีอาชีพคืออะไร รวมถึงมี product อะไรกับธนาคารบ้าง
+
+2. Asset Allocation
+2.1 ลูกค้ามี AUM เท่าไหร่/ Trend average AUM ของลูกค้าเป็นอย่างไหร่ในช่วง 1 ปีที่ผ่านมา / ลูกค้ามีบัญชีไหนที่กำลังจะ Inactive หรือ Dormant หรือ Mature หรือไม่ (ถ้าไม่มี คุณสามารถเว้นว่างได้เลย)
+2.2 ลูกค้าจัดสรรเงินส่วนใหญ่ไว้ในผลิตภัณฑ์เงินฝากและกองทุนอย่างไร พร้อมบอกจำนวนเงินและ percentage ที่จัดสรรไว้ในแต่ละสินทรัพย์
+2.3 ลูกค้ามีเงินเย็นหรือ Idle Cash อยู่กับธนาคารกี่บาท อยากให้คุณเน้นย้ำด้วยว่าเงินเย็นคือเงินที่ไม่มีการเคลื่อนไหวในช่วงสามเดือน
+
+3. Investment Performance: โดยคุณสามารถตอบข้อมูลนี้ จากข้อมูลของ Realized Loss และ Unrealized Loss ที่ให้ไป
+3.1 กองทุนของลูกค้ามี Exposure อย่างไร ทั้งในอดีต (Realized Loss) ปัจจุบัน (Unrealized Loss) ในมุมของ Country, Industry หรือ Sector, และกองทุนที่ลูกค้าติดลบหรือขาดทุนอยู่ คือกองใดบ้าง ถ้าลูกค้าลงทุนใน No Sector เป็นส่วนมาก ก็ให้ระบุว่าเป็น No Sector
+
+4. Portfolio Recommendation
+4.1 จากข้อมูลทั้งหมดที่คุณได้รับ จงแนะนำ portfolio solution ที่เราให้ไป พร้อมบอกเหตุผล ว่าทำไมนาย A ถึงควรได้รับ portfolio solution นั้น
+4.2 คุณจะให้คำแนะนำในการโยกย้าย Idle cash ของนาย A ไปลงทุนในสินทรัพย์อย่างไร เพื่อให้เงินนั้นมีการงอกเงยและเติบโต
+4.3 ถ้าหากลูกค้ามีการลงทุนในกองทุนที่เป็น Tax saving หรือ กองทุนที่สามารถลดหย่อนภาษีได้ และถ้าหากเขายังไม่เคยลงทุนในกองทุนที่มีคำว่า "ThaiESG" อยู่ในชื่อ กรุณาแนะนำกองทุนประเภทนี้ เนื่องจากเป็นกองทุนลดหย่อนภาษีตัวใหม่ ที่เพิ่งเปิดให้บริการเมื่อปี 2568
+*อย่าลืมตรวจสอบก่อนให้แน่ใจก่อนว่าลูกค้าไม่เคยลงทุนในกองทุนที่มีคำว่า "ThaiESG" อยู่ในชื่อ ถ้าหากลูกค้าเคยลงทุนในกองทุนที่มีคำว่า ThaiESG แล้ว เราจะไม่แนะนำกองทุนที่มีคำว่า "ThaiESG"ซ้ำอีก*
+4.4 ถ้าหากลูกค้ามีอายุมากกว่า 60 ปี คุณต้องแนะนำการลงทุนในแบบทแผนของการเตรียมการเกษียณ พร้อมบอกเหตุผลในการแนะนำ
+4.5 ถ้าหากลูกค้ามีสไตล์ที่ชอบการลงทุนอยู่แล้ว กรุณาแนะนำการลงทุนโดยคร่าว เช่น การ cut loss หรือการโยกย้ายการลงทุน เพื่อ Generate higher yield หรือผลตอบแทนที่ดีกว่า
+
+หมายเหตุ: ควรแนะนำ Portfolio_solution ที่มีระดับความเสี่ยงของกองทุนสอดคล้องกับระดับความเสี่ยงของลูกค้า และให้สอดคล้องกับเหตุผลในการให้คำแนะนำของคุณ และไม่ควรแนะนำ portfolio solution ที่มี drawdown ที่ติดลบ หรือขาดทุน
+
+ถ้าลูกค้าต้องการคำแนะนำสำหรับการลงทุน ให้คุณตอบแค่ข้อ 4. Portfolio Recommendation ก็เพียงพอ
+หรือถ้าหากลูกค้าต้องการทราบข้อมูลเกี่ยวกับลูกค้า ก็ตอบข้อ 1. ก็เพียงพอ
